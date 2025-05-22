@@ -51,7 +51,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
         Route::post('/{book}/borrow', [BookController::class, 'borrow'])->name('books.borrow');
     });
 
-    // Transactions
+    // Transactionss
     Route::prefix('transactions')->group(function () {
         Route::get('/stats', [TransactionController::class, 'userStats']);
         Route::get('/', [TransactionController::class, 'index'])->name('transactions.index');
