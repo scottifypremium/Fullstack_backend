@@ -18,7 +18,7 @@ class Kernel extends ConsoleKernel
                 ->whereNull('notified_at')
                 ->with(['user', 'book'])
                 ->get();
-
+//
             foreach ($transactions as $transaction) {
                 $transaction->user->notify(new BookDueSoonNotification(
                     $transaction->book, 
